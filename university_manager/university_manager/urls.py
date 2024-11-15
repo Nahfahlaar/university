@@ -22,6 +22,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 from students.views import StudentViewSet
+from users.views import register_user, login_view
 
 
 router = DefaultRouter()
@@ -40,4 +41,6 @@ urlpatterns = [
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('admin/', admin.site.urls),
     path('api/',include(router.urls)),
+    path('register/', register_user),
+    path('login/', login_view)
 ]

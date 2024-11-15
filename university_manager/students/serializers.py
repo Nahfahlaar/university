@@ -10,8 +10,6 @@ class StudentPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = "__all__"
-
-
 class StudentAdminGetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
